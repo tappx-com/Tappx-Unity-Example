@@ -38,7 +38,7 @@ Other features demonstrated:
 
 ## 📲 Downloads
 
-For the latest builds of this demo app, check the [Releases](https://github.com/tappx-com/Tappx-Unity-Example/releases) section.
+For the latest builds of this demo app, please check the [Releases](https://github.com/tappx-com/Tappx-Unity-Example/releases) section.
 
 ---
 
