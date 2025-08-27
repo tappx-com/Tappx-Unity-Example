@@ -1,0 +1,10 @@
+﻿<dependencies>
+  <iosPods>
+    <iosPod name="TappxSDK" version="4.2.4" />
+  </iosPods>
+
+  <androidPackages>
+    <androidPackage spec="com.tappx.sdk.android:tappx-sdk:4.1.11">
+    </androidPackage>
+  </androidPackages>
+</dependencies>
