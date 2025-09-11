@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using TappxSDK;
 using System;
+using System.IO;
 
 public class TappxManagerUnity : MonoBehaviour
 {
@@ -101,6 +102,34 @@ public class TappxManagerUnity : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Returns the current version of the Tappx SDK wrapper
+    /// </summary>
+    /// <returns>Version string from version.txt file</returns>
+    public static string GetVersion()
+    {
+        try
+        {
+            string versionPath = Path.Combine(Application.dataPath, "TappxSDK", "version.txt");
+            if (File.Exists(versionPath))
+            {
+                string version = File.ReadAllText(versionPath).Trim();
+                Debug.Log($"[TappxSDK] Version: {version}");
+                return version;
+            }
+            else
+            {
+                Debug.LogWarning("[TappxSDK] Version file not found at: " + versionPath);
+                return "Unknown";
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"[TappxSDK] Error reading version: {ex.Message}");
+            return "Error";
+        }
+    }
+
     private bool isTestMode = false;
     private string currentTappxId = "";
 
@@ -110,6 +139,9 @@ public class TappxManagerUnity : MonoBehaviour
         {
             mInstance = this;
             DontDestroyOnLoad(gameObject);
+            
+            // Log the SDK version on startup
+            GetVersion();
         }
         else
         {

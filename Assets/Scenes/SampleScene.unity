@@ -1361,13 +1361,14 @@ GameObject:
   - component: {fileID: 459671891}
   - component: {fileID: 459671893}
   - component: {fileID: 459671892}
+  - component: {fileID: 459671894}
   m_Layer: 5
   m_Name: Text (Legacy) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &459671891
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1421,7 +1422,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SDK Version
+  m_Text: version?
 --- !u!222 &459671893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1430,6 +1431,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459671890}
   m_CullTransparentMesh: 1
+--- !u!114 &459671894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459671890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a51fda78714f30b86b25e358bf6463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  versionText: {fileID: 459671892}
+  versionPrefix: 'version: '
+  updateOnStart: 1
 --- !u!1 &546350595
 GameObject:
   m_ObjectHideFlags: 0
